@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>留言板</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/board.css">
+</head>
+
+<body>
+    {% extends 'index.html' %}
+    {% block struct %}
+    <div id="master">
+        <div id="left">
+            <div>主人寄语</div>
+            <div id="master_left_down">奋发向上,提升自我;学好技术,决胜IT</div>
+        </div>
+        <a href="/writeBoard">
+            <div id="right">点我留言</div>
+        </a>
+    </div>
+    {% if params.pages > 1 %}
+    <div class="boardNav">
+        <a href="/board">首页</a>
+        {% if params.pages > 1 %}
+        <a href="/board?page={{params.pageback}}">上一页</a>
+        {% endif %}
+        {% for i in range(params.pages) %}
+        <a href="/board?page={{i}}">{{i+1}}</a>
+        {% endfor %}
+        {% if params.pages > 1 %}
+        <a href="/board?page={{params.pagenext}}">下一页</a>
+        {% endif %}
+        <a href="/board?page={{params.pagelast}}">尾页</a>
+    </div>
+    {% endif %}
+    {% for i in params.boards %}
+    <div class="board">
+        <p class="username">{{i.user.username}}说:</p>
+        <div id="id{{i.id}}" hidden></div>
+        <div id="content"></div>
+        <div class="text">
+            {{ i.text | safe }}
+        </div>
+        <p class="time">{{i.date}}</p>
+        <script>
+        </script>
+    </div>
+    {% endfor %}
+    {% if params.pages > 1 %}
+    <div class="boardNav">
+        <a href="/board">首页</a>
+        {% if params.pages > 1 %}
+        <a href="/board?page={{params.pageback}}">上一页</a>
+        {% endif %}
+        {% for i in range(params.pages) %}
+        <a href="/board?page={{i}}">{{i+1}}</a>
+        {% endfor %}
+        {% if params.pages > 1 %}
+        <a href="/board?page={{params.pagenext}}">下一页</a>
+        {% endif %}
+        <a href="/board?page={{params.pagelast}}">尾页</a>
+        {% endif %}
+        {% if params.errMsg %}
+        <script>
+            alert('登陆后方可进行此操作');
+        </script>
+    </div>
+    {% endif %}
+    {% endblock %}
+</body>
+
+</html>

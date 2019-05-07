@@ -1,0 +1,77 @@
+#master {
+    width: 990px;
+    margin-top: 10px;
+    font-family: "黑体";
+    font-size: 80px;
+    background: black;
+    color: #67D8EF;
+    position: relative;
+}
+
+#master #left {
+    width: 650px;
+    display: inline-block;
+    height: 92px;
+}
+
+#master a {
+    width: 300px;
+    display: inline-block;
+    background: yellow;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    height: 139px;
+    position: absolute;
+    right: 0;
+    line-height: 139px;
+}
+
+#master #master_left_down {
+    color: #67D8EF;
+    font-family: "黑体";
+    font-size: 30px;
+    height: 34.8px;
+}
+
+.board {
+    cursor: default;
+    background: #737373;
+}
+
+.board .username {
+    font-family: "微软雅黑";
+    font-size: 30px;
+    color: #67D8EF;
+    height: 20px;
+}
+
+.board .text {
+    background: #737373;
+    border: none;
+    padding: 0;
+    resize: none;
+    width: 978px;
+    height: 100px;
+    cursor: default;
+    padding-left: 10px;
+}
+
+.board .time {
+    text-align: right;
+    color: white;
+    padding-right: 10px;
+}
+
+.boardNav {
+    text-align: right;
+    height: 30px;
+}
+.boardNav a{
+    text-align: right; 
+    color: blue;
+}
+
+#LastLeft b{
+    float: left;
+}

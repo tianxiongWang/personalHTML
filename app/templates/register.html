@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册账户</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/register.css">
+    <script type="text/javascript" src="/static/js/register.js">
+    </script>
+</head>
+
+<body>
+    {% extends 'index.html' %}
+    {% block struct %}
+    <div id="register">
+        <div id="welcome">
+            <span class="welcomeSpan" id="welcome1">欢</span>
+            <span class="welcomeSpan" id="welcome2">迎</span>
+            <span class="welcomeSpan" id="welcome3">加</span>
+            <span class="welcomeSpan" id="welcome4">入</span>
+        </div>
+        <script type="text/javascript" src="/static/js/register.js"></script>
+        <div id="main">
+            <form id="form" action="/register" method="POST">
+                <table>
+                    <tr>
+                        <td class="first">*用户名：</td>
+                        <td class="second"><input id="username" onblur="identy_user()" name='uname' type="text"></td>
+                        <td id="userText" class="third">用户名至少6位，最长30位</td>
+                    </tr>
+                    <tr>
+                        <td class="first">*密码：</td>
+                        <td class="second"><input id="upwd" name='upwd' type="password" onblur="identy_password()"></td>
+                        <td id="upwdText" class="third">密码至少8位</td>
+                    </tr>
+                    <tr>
+                        <td class="first">*电子邮箱：</td>
+                        <td class="second"><input onblur="identy_email()" id="uemail" name='uemail' type="email"></td>
+                        <td id="emailText" class="third">Email是你的找回账号的重要凭证</td>
+                    </tr>
+                    <tr>
+                        <td class="first">*手机号码：</td>
+                        <td class="second">
+                            <input id="uphone" name='uphone' type="text">
+                        </td>
+                        <td><button id="send" onclick="sendMsg()" type="button">发送验证码</button></td>
+                    <tr>
+                        <td></td>
+                        <td class="second"><input id="msgtext" type="text" value="请输入短信验证码" name="identity" onfocus="show()"
+                                onblur="showvalue()"></td>
+                    </tr>
+                </table>
+                <div id="commit">
+                    <input type="submit" value="提&nbsp;&nbsp;交">
+                    <a href="/"><input type="button" value="返&nbsp;&nbsp;回"></a>
+                </div>
+                <script type="text/javascript" src="/static/js/register_other.js"></script>
+            </form>
+        </div>
+    </div>
+    </script>
+    {% endblock %}
+</body>
+
+</html>

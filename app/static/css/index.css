@@ -1,0 +1,447 @@
+html {
+	position: relative;
+}
+
+body,
+h1,
+h2,
+h3,
+div,
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #67D8EF;
+}
+
+#container {
+	width: 990px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/*导航栏部分的样式*/
+#container #nav {
+	width: 990px;
+	height: 40px;
+	background-color: black;
+}
+
+#container #nav #leftNav {
+	float: left;
+	padding-left: 10px;
+	height: 40px;
+}
+
+#container #nav #leftNav>li {
+	float: left;
+	padding-left: 15px;
+	color: white;
+	line-height: 40px;
+	height: 40px;
+}
+
+#container #nav img {
+	height: 40px;
+}
+
+#container #nav #rightNav {
+	float: right;
+	padding-right: : 10px;
+	height: 40px;
+}
+
+#container #nav #rightNav>li {
+	float: left;
+	padding-right: 15px;
+	color: white;
+	line-height: 40px;
+	height: 40px;
+}
+
+#container #nav #leftNav>.select>ul {
+	color: black;
+	display: none;
+}
+
+#container #nav #leftNav>.select>ul a {
+	color: #AC80CE;
+}
+
+#container #nav #leftNav>.select {
+	position: relative;
+}
+
+#container #nav #leftNav>.select:hover ul {
+	position: absolute;
+	display: block;
+	z-index: 10;
+	background-color: #DBDBDB;
+}
+
+#container #nav #leftNav>.select:hover ul li {
+	width: 80px;
+	text-align: center;
+	line-height: 35px;
+	height: 35px;
+}
+
+/*轮播图片的样式*/
+#container #bigPicture {
+	margin-top: 10px;
+	width: 100%;
+}
+
+#container #bigPicture #first {
+	display: inline-block;
+}
+
+#container #bigPicture #second {
+	display: none;
+}
+
+#container #bigPicture #third {
+	display: none;
+}
+
+/*轮播图导航小图标*/
+#container #bigPictureNav {
+	width: 200px;
+	height: 40px;
+	display: inline-block;
+	float: left;
+	z-index: 100;
+	position: absolute;
+	top: 330px;
+	left: 790px;
+}
+
+#container #bigPictureNav ul {
+	float: left;
+}
+
+#container #bigPictureNav ul li {
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background: white;
+	color: black;
+	margin-bottom: 25px;
+	margin-right: 22px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#container #bigPictureNav ul #bigPictureNavUlFirst {
+	background: green;
+}
+
+/*主体*/
+.main {
+	margin-top: 10px;
+}
+
+.main .introduce {
+	position: relative;
+	height: 200px;
+	background: #67D8EF;
+}
+
+.main .introduce #dp {
+	float: left;
+	width: 200px;
+	height: 200px;
+	background: url(../images/dp.jpg);
+}
+
+.main .introduce #dp:hover {
+	float: left;
+	width: 200px;
+	height: 200px;
+	background: url(../images/dp.jpg);
+	background-position: 200px;
+	right: 200px;
+}
+
+.main .introduce #introduceRight {
+	float: left;
+	width: 790px;
+	height: 200px;
+}
+
+.main .introduce #introduceRight #top {
+	height: 97px;
+	color: black;
+}
+
+.main .introduce #introduceRight #top p {
+	font-family: "黑体";
+	font-size: 40px;
+	margin: 0;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+
+.main .introduce #introduceRight #top span {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.main .introduce #introduceRight #bottom {
+	height: 103px;
+	vertical-align: bottom;
+}
+
+.main .introduce #introduceRight #bottom ul {
+	float: left;
+	margin-top: 48px;
+	margin-left: 25px;
+	width: 775px;
+}
+
+.main .introduce #introduceRight #bottom ul li {
+	float: left;
+	margin-right: 24.5px;
+}
+
+.main .introduce #introduceRight #bottom ul li b {
+	margin-left: 24.5px;
+	border-right: 2px gray solid;
+	font-size: 30px;
+	line-height: 40px;
+}
+
+.main .introduce #introduceRight #bottom ul li a {
+	float: left;
+	color: #D2F2FF;
+	text-decoration: none;
+	font-size: 30px;
+}
+
+.main .introduce #introduceRight #bottom ul li a:hover {
+	transform: scale(1.3);
+	transition: 0.5s;
+}
+
+/*今日要闻*/
+.main #news {
+	width: 990px;
+	height: 381px;
+	margin-top: 30px;
+}
+
+.main #news #newsLeft {
+	float: left;
+	width: 200px;
+	height: 381px;
+	background: url(../images/news.jpg);
+}
+
+.main #news #newsRight {
+	float: left;
+	width: 790px;
+	height: 381px;
+}
+
+.main #news #newsRight #newsRightTop {
+	float: left;
+	width: 790px;
+	height: 80px;
+}
+
+.main #news #newsRight #newsRightTop ul {
+	float: left;
+	height: 80px;
+	width: 790px;
+}
+
+.main #news #newsRight #newsRightTop ul li {
+	float: left;
+	height: 80px;
+	line-height: 80px;
+	font-size: 40px;
+	margin-left: 1px;
+	background-color: #F2F2F3;
+	padding: 0 51.0px;
+}
+
+.main #news #newsRight #newsRightTop ul li:hover {
+	transform: scale(1.1);
+}
+
+/* 今日要闻里的内容 */
+.main #news #newsRight #newsRightBottom1 {
+	float: left;
+	width: 790px;
+	height: 301px;
+	font-family: "微软雅黑";
+	display: block;
+}
+
+.main #news #newsRight #newsRightBottom1 td {
+	color: gray;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.main #news #newsRight #newsRightBottom1 a {
+	color: gray;
+}
+
+.main #news #newsRight #newsRightBottom1 #more_1 {
+	text-align: right;
+	padding-right: 30px;
+	line-height: 50px;
+}
+
+/* 游戏资讯里的内容 */
+.main #news #newsRight #newsRightBottom2 {
+	float: left;
+	width: 790px;
+	height: 301px;
+	font-family: "微软雅黑";
+	display: none;
+}
+
+.main #news #newsRight #newsRightBottom2 td {
+	color: gray;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.main #news #newsRight #newsRightBottom2 a {
+	color: gray;
+}
+
+.main #news #newsRight #newsRightBottom2 #more_2 {
+	text-align: right;
+	padding-right: 30px;
+	line-height: 50px;
+}
+
+/* 技术前沿里的内容 */
+.main #news #newsRight #newsRightBottom3 {
+	float: left;
+	width: 790px;
+	height: 301px;
+	font-family: "微软雅黑";
+	display: none;
+}
+
+.main #news #newsRight #newsRightBottom3 td {
+	color: gray;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.main #news #newsRight #newsRightBottom3 a {
+	color: gray;
+}
+
+.main #news #newsRight #newsRightBottom3 #more_3 {
+	text-align: right;
+	padding-right: 30px;
+	line-height: 50px;
+}
+
+/* 表格的宽度设置 */
+.main #news #newsRight td{
+	width: 288.2px;
+}
+/*回到顶部标志*/
+#TOP {
+	width: 50px;
+	height: 30px;
+	background-color: #D6D6D6;
+	text-align: center;
+	line-height: 30px;
+	position: fixed;
+	bottom: 10px;
+	right: 200px;
+	color: black;
+	z-index: 5;
+}
+
+#Last {
+	margin-top: 10px;
+	width: 990px;
+	height: 45px;
+	background: black;
+}
+
+#Last #LastLeft {
+	float: left;
+	width: 330px;
+	height: 45px;
+}
+
+#Last #LastLeft img {
+	float: left;
+	margin: 7px 0 7px 25px;
+}
+
+#Last #LastLeft b {
+	color: #67D8EF;
+	line-height: 45px;
+}
+
+#Last #LastMiddle {
+	float: left;
+	width: 330px;
+	height: 45px;
+}
+
+#Last #LastMiddle b {
+	float: left;
+	color: #67D8EF;
+	font-size: 10px;
+	font-family: "黑体";
+	width: 330px;
+	text-align: center;
+	line-height: 22.5px;
+}
+
+
+#Last #LastRight {
+	float: left;
+	width: 330px;
+	height: 45px;
+	position: relative;
+}
+
+#Last #LastRight #LastRightLeft {
+	float: left;
+	color: #67D8ef;
+	height: 45px;
+	text-align: center;
+	width: 45px;
+	margin-left: 50px;
+	font-family: "黑体";
+	position: relative;
+	top: 4px;
+}
+
+#Last #LastRight #LastRightRight {
+	float: left;
+}
+
+#Last #LastRight #LastRightRight b {
+	float: left;
+	color: #67D8EF;
+	font-size: 10px;
+	font-family: "黑体";
+	text-align: center;
+	line-height: 22.5px;
+}

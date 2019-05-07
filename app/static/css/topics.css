@@ -1,0 +1,45 @@
+table {
+    margin-top: 10px;
+    background: black;
+    width: 990px;
+}
+
+table thead td {
+    color: yellow;
+    height: 20px;
+    text-align: center;
+}
+
+table tbody td {
+    color: yellow;
+    height: 20px;
+    text-align: center;
+    border-bottom: 1px gray dashed;
+}
+
+table thead #column_1 {
+    width: 80px;
+}
+
+table thead #column_2 {
+    width: 200px;
+}
+
+table thead #column_3 {
+    width: 300px;
+}
+
+table tbody td {
+    color: pink;
+    text-align: center;
+}
+
+#nav {
+    background: black;
+    text-align: right;
+    line-height: 40px;
+}
+
+#nav span{
+    padding-right: 20px;
+}

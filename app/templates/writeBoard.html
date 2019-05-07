@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录账户</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/writeBoard.css">
+    <script type="text/javascript" src="/static/js/ckeditor/ckeditor.js"></script>
+
+</head>
+
+<body>
+    {% extends 'index.html' %}
+    {% block struct %}
+    <div id="master">
+        <div id="left">
+            <div>主人寄语</div>
+            <div id="master_left_down">奋发向上,提升自我;学好技术,决胜IT</div>
+        </div>
+    </div>
+    <form onsubmit="return sb()" action="/writeBoard" method="post">
+        <textarea id="content" name="input"></textarea>
+        <script>
+            var editor = CKEDITOR.replace('input');
+        </script>
+        <input id="write" type="submit" value="发表留言">
+    </form>
+    <script type="text/javascript" src="/static/js/writeBoard.js"></script>
+    {% endblock %}
+</body>
+
+</html>

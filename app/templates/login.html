@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录账户</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+</head>
+
+<body>
+    {% extends 'index.html' %}
+    {% block struct %}
+    <div id="register">
+        <div id="tittle">
+            <div class="select" id="tittle1">用户名登录(点击切换)</div>
+            <div class="select" id="tittle2">短信验证登录(点击切换)</div>
+        </div>
+        <div id="main1">
+            <form id="form" action="/loginUsername" method="POST">
+                <table>
+                    <tr>
+                        <td class="first">用户名：</td>
+                        <td class="second"><input id="username" onblur="identy_user()" name='uname' type="text"></td>
+                        <td id="userText" class="third"></td>
+                    </tr>
+                    <tr>
+                        <td class="first">密码：</td>
+                        <td class="second"><input id="upwd" name='upwd' type="password" onblur="identy_password()"></td>
+                        <td id="upwdText" class="third"></td>
+                    </tr>
+                </table>
+                <div id="commit">
+                    <input type="submit" value="登&nbsp;&nbsp;录">
+                    <a href="/"><input type="button" value="返&nbsp;&nbsp;回"></a>
+                </div>
+            </form>
+            {% if errMsg %}
+            <script>
+                alert('用户名或密码不正确，请检查哦!');
+            </script>
+            {% endif %}
+        </div>
+        <div id="main2">
+            <form id="form2" action="/loginPhone" method="POST" onsubmit="return message()">
+                <table>
+                    <tr>
+                        <td class="first2">手机号码：</td>
+                        <td class="second2"><input id="phonenum" name='phonenum' type="text">
+                        </td>
+                        <div style="display:none;" id="hidden_exist"></div>
+                        <td><button onclick="sendMsg()" type="button">发送验证码</button></td>
+                        <div style="display:none;" id="hidden_msg"></div>
+                    </tr>
+                    <tr>
+                        <td class="first2">短信验证码：</td>
+                        <td class="second2"><input id="Msgidenty" name='Msgidenty' type="text"></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div id="commit2">
+                    <input type="submit" value="登&nbsp;&nbsp;录">
+                    <a href="/"><input type="button" value="返&nbsp;&nbsp;回"></a>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="/static/js/login.js"></script>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

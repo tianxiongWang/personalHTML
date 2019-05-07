@@ -1,0 +1,188 @@
+#register {
+    margin-top: 10px;
+    background: black;
+    border: 1px solid black;
+}
+
+#register #tittle {
+    margin: 0 auto;
+    width: 800px;
+    height: 50px;
+}
+
+#register #tittle .select {
+    cursor: default;
+    width: 400px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+#register #tittle #tittle1 {
+    background: #89DDFF;
+}
+
+#register #tittle #tittle2 {
+    background: #C3E88D;
+}
+
+#register #welcome {
+    width: 800px;
+    height: 140px;
+    margin: 0 auto;
+}
+
+#register #main1 {
+    margin: 0 auto;
+    background: white;
+    height: 370px;
+    width: 800px;
+}
+
+#register #main1 #form {
+    margin: 0 auto;
+}
+
+#register #main1 #form table {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#register #main1 #form table tr {
+    height: 60px;
+}
+
+#register #main1 #form table .first {
+    width: 100px;
+    text-align: left;
+    padding: 0 0 0 40px;
+}
+
+#register #main1 #form table .second {
+    width: 380px;
+    text-align: left;
+    padding: 0 0 0 20px;
+}
+}
+
+#register #main1 #form table .third {
+    width: 320px;
+    text-align: left;
+    padding: 0 0 0 40px;
+}
+
+#register #main1 #form table .second input {
+    border: 1px solid #89DDFF;
+    border-radius: 5px;
+    padding-left: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+#register #main1 #form table .third input {
+    border: 1px solid #89DDFF;
+    border-radius: 5px;
+    padding-left: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    width: 120px;
+    font-size: 15px;
+}
+
+
+#register #main1 #form #commit {
+    height: 245px;
+    background: #89DDFF;
+}
+
+#register #main1 #form #commit input {
+    height: 100px;
+    background: #BD92EA;
+    width: 240px;
+    font-family: "微软雅黑";
+    font-size: 60px;
+    text-align: center;
+    line-height: 100px;
+    margin-left: 100px;
+    margin-top: 50px;
+    border-radius: 15px;
+}
+
+/* 短信验证登录模块的显示 */
+#register #main2 {
+    margin: 0 auto;
+    background: white;
+    width: 800px;
+    height: 370px;
+    display: none;
+}
+
+#register #main2 #form2 #commit2 {
+    height: 245px;
+    background: #89DDFF;
+}
+
+#register #main2 #form2 #commit2 input {
+    height: 100px;
+    background: #BD92EA;
+    width: 240px;
+    font-family: "微软雅黑";
+    font-size: 60px;
+    text-align: center;
+    line-height: 100px;
+    margin-left: 100px;
+    margin-top: 50px;
+    border-radius: 15px;
+}
+
+#register #main2 #form2 table {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#register #main2 #form2 table tr {
+    height: 60px;
+}
+
+#register #main2 #form2 table .first2 {
+    width: 100px;
+    text-align: left;
+    padding: 0 0 0 40px;
+}
+
+#register #main2 #form2 table .second2 {
+    width: 380px;
+    text-align: left;
+    padding: 0 0 0 20px;
+}
+}
+
+#register #main2 #form2 table .third2 {
+    width: 320px;
+    text-align: left;
+    padding: 0 0 0 40px;
+}
+
+#register #main2 #form2 table .second2 input {
+    border: 1px solid #89DDFF;
+    border-radius: 5px;
+    padding-left: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+#register #main2 #form2 table .third2 input {
+    border: 1px solid #89DDFF;
+    border-radius: 5px;
+    padding-left: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    width: 120px;
+    font-size: 15px;
+}

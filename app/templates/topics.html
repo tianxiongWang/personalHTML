@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block struct %}
+<link rel="stylesheet" type="text/css" href="static/css/topics.css">
+<table>
+	<thead>
+		<td id="column_1">文章类别</td>
+		<td id="column_2">文章标题</td>
+		<td id="column_3">内容简要</td>
+		<td id="column_4">发表时间</td>
+		<td id="column_5">操作</td>
+	</thead>
+	<tbody>
+		{% for i in params.topics %}
+		<tr class="content">
+			<td>{{i.category.categoryName}}</td>
+			<td><a href="topic?id={{i.id}}">{{i.tittle}}</a></td>
+			<td>{{i.text|safe|truncate(20,true)}}</td>
+			<td>{{i.time}}</td>
+			<td>
+				{% if 'uid' in session and session['uid'] == 10000 %}<a href="#">删除</a>&nbsp;<a
+					href="#">修改</a>&nbsp;{% endif %}<a href="#">评论</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<div id="nav">
+	<span>
+		<a style="color:white;" href="/topics?categoryid={{params.categoryid}}">首页</a>
+		{% for i in range(params.pages) %}
+		&nbsp;<a style="color:white;" href="/topics?categoryid={{params.categoryid}}&page={{i}}">{{i+1}}</a>&nbsp;
+		{% endfor %}
+		<a style="color:white;" href="/topics?categoryid={{params.categoryid}}&page={{params.pages-1}}">尾页</a>
+	</span>
+
+</div>
+{% endblock %}
