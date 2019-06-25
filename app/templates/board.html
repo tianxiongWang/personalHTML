@@ -39,14 +39,12 @@
     {% for i in params.boards %}
     <div class="board">
         <p class="username">{{i.user.username}}说:</p>
-        <div id="id{{i.id}}" hidden></div>
+        <div id="{{i.id}}" hidden></div>
         <div id="content"></div>
         <div class="text">
-            {{ i.text | safe }}
+            {{ i.text | safe | truncate(79)}}
         </div>
         <p class="time">{{i.date}}</p>
-        <script>
-        </script>
     </div>
     {% endfor %}
     {% if params.pages > 1 %}

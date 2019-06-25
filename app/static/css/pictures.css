@@ -1,0 +1,36 @@
+#up{
+    color: black;
+    font-family: "微软雅黑";
+    font-size: 60px;
+}
+
+#up_load{
+    background: yellow;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#all{
+    margin-top: 10px;
+    width: 990px;
+    height: 600px;
+    background: red;
+}
+
+#all .inline-block{
+    height: 300px;
+    margin-left: 30px;
+    background: blue;
+    width: 450px;
+    float: left;
+}
+
+#all .inline-block img{
+    height: 250px;
+    width: 450px;
+}
+
+#all .inline-block p{
+    margin: 0;
+}

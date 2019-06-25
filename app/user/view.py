@@ -57,4 +57,11 @@ def getSession():
         if session.get('uname') == 'wangxiong':
             return 'OK'
     else:
-        return 'NOT OK' 
+        return 'NOT OK'
+
+@user.route('/getSession_user')
+def getSession_user():
+    if 'uid' in session and 'uname' in session:
+        return 'OK'
+    else:
+        return 'NOT OK'

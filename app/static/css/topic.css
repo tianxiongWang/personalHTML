@@ -1,0 +1,37 @@
+.board {
+    cursor: default;
+    background: #737373;
+}
+
+.board .username {
+    font-family: "微软雅黑";
+    font-size: 30px;
+    color: #67D8EF;
+    height: 20px;
+}
+
+.board .text {
+    background: #737373;
+    border: none;
+    padding: 0;
+    resize: none;
+    width: 978px;
+    height: 100px;
+    cursor: default;
+    padding-left: 10px;
+}
+
+.board .time {
+    text-align: right;
+    color: white;
+    padding-right: 10px;
+}
+
+.boardNav {
+    text-align: right;
+    height: 30px;
+}
+.boardNav a{
+    text-align: right; 
+    color: blue;
+}

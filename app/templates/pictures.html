@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block struct %}
+<link rel="stylesheet" type="text/css" href="/static/css/pictures.css">
+<a id="up" href="upLoadPicture">
+    <div id="up_load">上传图片</div>
+</a>
+<div id="all">
+    {% for i in params.cates %}
+    <div class="inline-block">
+        <a href="/picture?cate={{i.id}}"><img src="{{i.path}}" class="picture"></a>
+        <p>相册名称:{{i.name}}</p>
+        <p>照片数量:{{i.pictures.count()}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

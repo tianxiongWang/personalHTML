@@ -1,4 +1,4 @@
-// 轮播图的动画效果
+﻿// 轮播图的动画效果
 var timer = setInterval(chart, 3000)
 var i = 1
 
@@ -56,7 +56,7 @@ function go() {
 		if (xhr.readyState == 4 && xhr.status == 200) {
 			response = xhr.responseText;
 			if (response == 'OK') {
-				window.location.href = "http://localhost:5000/writetopic";
+				window.location.href = "http://www.wangxiong.club/writetopic";
 			} else {
 				alert('只有站长登陆后才能写日志哦');
 			}

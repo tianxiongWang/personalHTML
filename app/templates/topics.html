@@ -13,12 +13,12 @@
 		{% for i in params.topics %}
 		<tr class="content">
 			<td>{{i.category.categoryName}}</td>
-			<td><a href="topic?id={{i.id}}">{{i.tittle}}</a></td>
+			<td><a href="topic?topic_id={{i.id}}">{{i.tittle}}</a></td>
 			<td>{{i.text|safe|truncate(20,true)}}</td>
 			<td>{{i.time}}</td>
 			<td>
 				{% if 'uid' in session and session['uid'] == 10000 %}<a href="#">删除</a>&nbsp;<a
-					href="#">修改</a>&nbsp;{% endif %}<a href="#">评论</a>
+					href="#">修改</a>&nbsp;{% endif %}<a href="topic?topic_id={{i.id}}">评论</a>
 			</td>
 		</tr>
 		{% endfor %}
@@ -32,6 +32,6 @@
 		{% endfor %}
 		<a style="color:white;" href="/topics?categoryid={{params.categoryid}}&page={{params.pages-1}}">尾页</a>
 	</span>
-
 </div>
+
 {% endblock %}

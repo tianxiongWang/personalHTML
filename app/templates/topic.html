@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+{% block struct %}
+<link rel="stylesheet" type="text/css" href="/static/css/topic.css">
+<script type="text/javascript" src="/static/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="/static/js/topic.js"></script>
+<div style="background:gray;color: white;">
+    <p style="text-align:center;font-size:50px;margin:10px 0;">{{params.topic.tittle}}</p>
+    <p style="text-align:right;margin-right:15px;">{{params.topic.time}}</p>
+    <span>{{params.topic.text|safe}}</span>
+    <style>
+        span p {
+            padding: 0 25px 5px 25px;
+        }
+    </style>
+</div>
+<div>
+    {% if params.back_page %}
+    <span style="margin-left:25px;">
+        <a style="color:black;" href="/topic?topic_id={{params.back_page.id}}">上一篇</a>
+    </span>
+    {% endif %}
+    {% if params.next_page %}
+    <span style="margin-left:{% if params.back_page %}844px;{% else %}917px;{% endif %}">
+        <a style="color:black;" href="/topic?topic_id={{params.next_page.id}}">下一篇</a>
+    </span>
+    {% endif %}
+</div>
+<!-- 评论添加模块 -->
+<div>
+    <form onsubmit="return sb()" action="/writeDiscuss" method="post">
+        <textarea id="content" name="input"></textarea>
+        <script>
+            var editor = CKEDITOR.replace('input');
+        </script>
+        <input id="write" type="submit" value="发表评论">
+        <input type="text" hidden name="id" value="{{params.topic.id}}">
+    </form>
+    <script type="text/javascript" src="/static/js/topic.js"></script>
+</div>
+
+{% for i in params.topic.discusses %}
+<div>
+    <div class="board">
+        <p class="username">{{i.user.username}}评论说:</p>
+        <div class="text">
+            {{ i.text | safe}}
+        </div>
+        <p class="time">{{i.time}}</p>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,13 +1,8 @@
-function click() {
-    document.getElementById("write").disabled = true;
-}
-
 function sb() {
-    var content = editor.document.getBody().getText();
-    if (content.length > 1) {
-        return true;
-    } else {
-        alert('留言至少两个字符哦!')
-
+    var content = editor.document.getBody().getHtml();
+    if (content == "<p><br></p>"){
+        alert('留言不能为空');
+        return false;
     }
+    return true;
 }

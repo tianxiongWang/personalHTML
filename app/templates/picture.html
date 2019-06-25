@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block struct %}
+<link rel="stylesheet" type="text/css" href="/static/css/picture.css">
+{% for i in params.pictures %}
+<div class="picture">
+    <img src="{{i.static}}" alt="">
+</div>
+{% endfor %}
+{% endblock %}
